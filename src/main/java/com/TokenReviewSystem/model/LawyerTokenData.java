@@ -15,7 +15,12 @@ public class LawyerTokenData {
 	private String type_of_lawyer;
 	private String message_to_lawyer;
 	private String appoinment_date;
-	
+
+	public static boolean isValidEmail(String name)
+	{
+		return name.contains("@");
+	}
+
 	public LawyerTokenData() {
 		super();
 	}

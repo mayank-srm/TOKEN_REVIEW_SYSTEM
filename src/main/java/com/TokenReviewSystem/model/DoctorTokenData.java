@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Entity
 public class DoctorTokenData {
@@ -15,7 +17,10 @@ public class DoctorTokenData {
 	private String gender;
     private String doctorTypeToken;
     private String messageToDoctor;
-    
+
+	private static final Pattern emailPattern = Pattern.compile("^*@}$");
+
+
     public DoctorTokenData() {
 		super();
 	}
@@ -31,6 +36,12 @@ public class DoctorTokenData {
 	public int getT_id() {
 		return t_id;
 	}
+
+	public static boolean isValidEmail(String name)
+	{
+		return name.contains("@");
+	}
+
 	public void setT_id(int t_id) {
 		this.t_id = t_id;
 	}

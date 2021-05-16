@@ -18,8 +18,22 @@ public class UserData {
 	private String city;
 	private String state;
 	private int pincode;
-	
-	
+
+	public static boolean isValidEmail(String email)
+	{
+		return email.contains("@");
+	}
+	public static boolean isValidPhone(String phn)
+	{
+		String regex = "^[7-9][0-9]{9}";
+		return phn.matches(regex);
+	}
+	public static boolean isValidPin(String pin)
+	{
+		String regex = "^[1-9][0-9]{5}$";
+		return pin.matches(regex);
+	}
+
 	public UserData() {
 		super();
 	}

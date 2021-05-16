@@ -15,7 +15,12 @@ public class ElectricianTokenData {
 	private String type_of_electrician;
 	private String estimated_time_of_arrival;
 	private String message_to_electrician;
-	
+
+	public static boolean isValidEmail(String name)
+	{
+		return name.contains("@");
+	}
+
 	public ElectricianTokenData() {
 		super();
 	}

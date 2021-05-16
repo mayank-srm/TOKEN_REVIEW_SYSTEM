@@ -17,8 +17,12 @@ public class UserloginData {
 	private String usertype;
 	@OneToOne
 	private UserData userdata;
-	
-	
+
+	public static boolean isValidEmail(String name)
+	{
+		return name.contains("@");
+	}
+
 	public UserloginData() {
 		super();
 	}
