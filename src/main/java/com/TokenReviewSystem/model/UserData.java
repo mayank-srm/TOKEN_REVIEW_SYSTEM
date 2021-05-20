@@ -39,7 +39,6 @@ public class UserData {
 	}
 	public UserData(int idData, String firstname, String middlename, String lastname, String phonenumber, String city,
 			String state, int pincode) {
-		super();
 		this.idData = idData;
 		this.firstname = firstname;
 		this.middlename = middlename;

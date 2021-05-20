@@ -20,5 +20,7 @@ public class TokenReviewSystem {
 	public Docket TokenApi() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("")).build();
+
+
 	}
 }
